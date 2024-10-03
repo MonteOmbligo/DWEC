@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3 id = "titulo"></h3>
+    <p id = "resultado"></p>
+
+    <script>
+        let num = parseInt(prompt("Introduzca un numero positivo para conocer su factorial"));
+
+        if(!isNaN(num) && num > 0){
+            document.getElementById("titulo").innerHTML = "Factorial de " + num+ " es: " ;
+            document.getElementById("resultado").innerHTML = '<b>'+suFactorial(num);
+        }
+        else{
+            alert("Debe introducir un número entero positivo.");
+        }
+
+        function suFactorial(num){
+            let factorial = 1;
+            for(let i = 1; i <=num;i++){
+
+                factorial *= i;
+
+            }
+            return factorial;
+        }
+
+    </script>
+</body>
+</html>
